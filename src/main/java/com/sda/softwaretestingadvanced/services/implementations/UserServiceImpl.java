@@ -25,7 +25,7 @@ public class UserServiceImpl implements UserService {
             ResponseEntity<User> userResponseEntity = restTemplate.getForEntity("https://wwww.google.com/user", User.class);
             return userResponseEntity.getBody();
         } catch (HttpServerErrorException httpServerErrorException) {
-            throw new ServiceUnavailableException("Server unavailable !");
+            throw new ServiceUnavailableException("Server unavailable!");
         }
     }
 }
